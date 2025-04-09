@@ -54,9 +54,9 @@ class $AssetsIconsGen {
   AssetGenImage get chicken2 =>
       const AssetGenImage('assets/icons/chicken2.png');
 
-  /// File path: assets/icons/chicken3.png
-  AssetGenImage get chicken3 =>
-      const AssetGenImage('assets/icons/chicken3.png');
+  /// File path: assets/icons/choose_lvl.png
+  AssetGenImage get chooseLvl =>
+      const AssetGenImage('assets/icons/choose_lvl.png');
 
   /// File path: assets/icons/clear.png
   AssetGenImage get clear => const AssetGenImage('assets/icons/clear.png');
@@ -119,7 +119,7 @@ class $AssetsIconsGen {
         cell,
         chicken1,
         chicken2,
-        chicken3,
+        chooseLvl,
         clear,
         egg,
         eggs,

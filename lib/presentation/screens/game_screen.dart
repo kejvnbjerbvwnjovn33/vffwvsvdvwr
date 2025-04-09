@@ -36,7 +36,7 @@ class GameScreen extends StatelessWidget {
                 ),
               ),
               child: Scaffold(
-                backgroundColor: Colors.transparent,
+                backgroundColor: Colors.black.withAlpha(40),
                 body: SafeArea(
                   minimum: EdgeInsets.symmetric(
                     horizontal: 23,
@@ -92,18 +92,6 @@ class GameScreen extends StatelessWidget {
                             context,
                             bloc,
                           ),
-                        ),
-                        SizedBox(height: 20),
-                        StreamBuilder<int>(
-                          stream: bloc.scoreStream,
-                          builder: (context, snapshot) {
-                            return Text(
-                              '${snapshot.data ?? 0}',
-                              style: TextStyle(
-                                fontSize: 20,
-                              ),
-                            );
-                          },
                         ),
                       ],
                     ),
@@ -180,6 +168,7 @@ class GameScreen extends StatelessWidget {
                       },
                       child: Container(
                         margin: EdgeInsets.all(2),
+                        padding: EdgeInsets.all(5),
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
@@ -191,8 +180,7 @@ class GameScreen extends StatelessWidget {
                           child: isRevealed
                               ? Image.asset(
                                   isMine ? Assets.icons.egg.path : 'assets/icons/chicken${Random().nextInt(2) + 1}.png',
-                                  width: 50,
-                                  height: 50,
+                                  fit: BoxFit.cover,
                                 )
                               : Container(),
                         ),

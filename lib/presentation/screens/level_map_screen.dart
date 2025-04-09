@@ -30,26 +30,15 @@ class LevelMapScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: 50,
-                      width: 50,
                       child: GestureDetector(
-                        child: Image.asset(Assets.icons.clear.path),
+                        child:  Image.asset(Assets.icons.chooseLvl.path,width: MediaQuery.of(context).size.width*0.65,),
                         onTap: () => Navigator.of(context).pop(),
                       ),
                     ),
-                    Text(
-                      'Choose lvl',
-                      style: AppTypography.headline1.copyWith(
-                        fontSize: 27,
-                        color: AppColors.purple,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 50,
-                    )
+
                   ],
                 ),
               ),
@@ -72,9 +61,7 @@ class LevelMapScreen extends StatelessWidget {
                                     for (int i = 1; i <= 5; i++)
                                       Padding(
                                         padding: EdgeInsets.only(bottom: 20),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              i % 2 != 0 ? MainAxisAlignment.start : MainAxisAlignment.end,
+                                        child: Wrap(
                                           children: [
                                             Opacity(
                                               opacity: i <= levels ? 1.0 : 0.5,

@@ -4,7 +4,7 @@ import 'package:rxdart/rxdart.dart';
 
 @injectable
 class LevelsBloc {
-  static const String boxName = 'levelBox';
+  static const String boxName = 'levelzBox';
   final _levelsSubject = BehaviorSubject<int>();
   Stream<int> get levelStream => _levelsSubject.stream;
 
