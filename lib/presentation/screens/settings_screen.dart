@@ -38,18 +38,39 @@ class InfoScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         GestureDetector(
-                          child: Image.asset(Assets.icons.terms.path,width: 166,),
+                          child: Container(
+                            decoration:BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                        color: Colors.black.withAlpha(40),
+                    blurRadius: 12,spreadRadius: 1
+                    ),
+                        ],
+                    ),
+                            child: Image.asset(Assets.icons.terms.path,width: 166,),
+                          ),
                           onTap: () => launchUrlString(
                             ''
                           ),
                         ),
                         SizedBox(height: 80),
                         GestureDetector(
-                          child: Image.asset(Assets.icons.privacy.path,width: 231,),
+                          child: Container(
+                            decoration:BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black.withAlpha(40),
+                                    blurRadius: 12,spreadRadius: 1
+                                ),
+                              ],
+                            ),
+                            child: Image.asset(Assets.icons.privacy.path,width: 166,),
+                          ),
                           onTap: () => launchUrlString(
                               ''
                           ),
                         ),
+
                       ],
                     ),
                   ),
