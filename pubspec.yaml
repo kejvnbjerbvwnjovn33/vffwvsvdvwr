@@ -1,7 +1,6 @@
 name: chicken_mines
 description: "quiz chicken"
 publish_to: 'none'
-# supp: https://forms.gle/oja7UktxVMc5imcq5
 
 version: 1.0.1+1
 

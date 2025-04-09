@@ -27,7 +27,11 @@ class InfoScreen extends StatelessWidget {
                   height: 50,
                   width: 50,
                   child: GestureDetector(
-                    child: Image.asset(Assets.icons.clear.path,width: 50,height: 50,),
+                    child: Image.asset(
+                      Assets.icons.clear.path,
+                      width: 50,
+                      height: 50,
+                    ),
                     onTap: () => Navigator.of(context).pop(),
                   ),
                 ),
@@ -39,38 +43,33 @@ class InfoScreen extends StatelessWidget {
                       children: [
                         GestureDetector(
                           child: Container(
-                            decoration:BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                        color: Colors.black.withAlpha(40),
-                    blurRadius: 12,spreadRadius: 1
-                    ),
-                        ],
-                    ),
-                            child: Image.asset(Assets.icons.terms.path,width: 166,),
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(color: Colors.black.withAlpha(40), blurRadius: 12, spreadRadius: 1),
+                              ],
+                            ),
+                            child: Image.asset(
+                              Assets.icons.terms.path,
+                              width: 166,
+                            ),
                           ),
-                          onTap: () => launchUrlString(
-                            ''
-                          ),
+                          onTap: () => launchUrlString('https://www.freeprivacypolicy.com/live/44d43eb4-a3cb-4471-a664-bc6368d5e062'),
                         ),
                         SizedBox(height: 80),
                         GestureDetector(
                           child: Container(
-                            decoration:BoxDecoration(
+                            decoration: BoxDecoration(
                               boxShadow: [
-                                BoxShadow(
-                                    color: Colors.black.withAlpha(40),
-                                    blurRadius: 12,spreadRadius: 1
-                                ),
+                                BoxShadow(color: Colors.black.withAlpha(40), blurRadius: 12, spreadRadius: 1),
                               ],
                             ),
-                            child: Image.asset(Assets.icons.privacy.path,width: 166,),
+                            child: Image.asset(
+                              Assets.icons.privacy.path,
+                              width: 166,
+                            ),
                           ),
-                          onTap: () => launchUrlString(
-                              ''
-                          ),
+                          onTap: () => launchUrlString('https://www.freeprivacypolicy.com/live/a85d3c00-f5ee-4888-ae7f-0da095d38523'),
                         ),
-
                       ],
                     ),
                   ),

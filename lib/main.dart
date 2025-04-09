@@ -15,7 +15,6 @@ Future<void> main() async {
   await Hive.openBox<int>('score');
   await Hive.openBox<int>(BoxNames.reviewCount);
 
-
   Future.delayed(const Duration(seconds: 3)).then((_) {
     InAppReviewService.tryRequestReview();
   });
