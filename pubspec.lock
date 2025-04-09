@@ -103,7 +103,7 @@ packages:
     source: hosted
     version: "4.2.0"
   auto_route:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: auto_route
       sha256: a9001a90539ca3effc168f7e1029a5885c7326b9032c09ac895e303c1d137704
